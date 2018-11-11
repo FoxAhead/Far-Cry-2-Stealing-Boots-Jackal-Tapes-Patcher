@@ -1,0 +1,5 @@
+Game100        RCDATA Patterns\Game100.bin
+Game100102Mask RCDATA Patterns\Game100102Mask.bin
+Game103        RCDATA Patterns\Game103.bin
+Game103Mask    RCDATA Patterns\Game103Mask.bin
+Patch103       RCDATA Patterns\Patch103.bin
