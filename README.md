@@ -58,6 +58,8 @@ https://github.com/FoxAhead/Far-Cry-2-Stealing-Boots-Jackal-Tapes-Patcher/releas
 
 Download and run the file FarCry2StealingBootsJackalTapesPatcher.exe. Use the Browse button to select the Dunia.DLL file. Click Patch!
 
+![Screenshot](Screenshots/Patcher.png?raw=true)
+
 On the start, the program will try to automatically determine the installation path of the game, so the Browse button should immediately take you to the desired folder, and all that remains is to select the Duina.DLL file. Before applying the patch, the program checks the file, and if everything is in OK, then the Patch button! below will be enabled to click. The backup will be created automatically as soon as you confirm patching. If at any of the stages something goes wrong, the program will report that.
 
 The patcher searches for a suitable pattern of bytes using mask, so theoretically it is able to correct the subroutine even in some exotic Dunia.DLL file (other size, other addresses), provided that there really is an erroneous subroutine.
