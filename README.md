@@ -1,10 +1,10 @@
 # Far Cry 2 Stealing Boots Jackal Tapes Patcher
-##Insanity
+## Insanity
 Did I ever tell you what the definition of insanity is? Insanity is doing the exact… same f___ing thing… over and over again, expecting… s__t to change. Insanity is when you pick up another Jackal Tape expecting of hearing something further than “Stealing Boots”. No, no, no, no, no, please! This time it’s gonna be different record!
 Insanity is when a bug is not fixed for 10 years.
-##Signs and symptoms
+## Signs and symptoms
 With v1.03 update, a bug was introduced that does not allow to listen and does not mark as taken the tapes from the second southern map (Bowa-Seko) further than #09 “Stealing Boots”. The first picked up tape on this map is written as #09 “Stealing Boots”, and all subsequent tapes on the same map will simply repeat it, forcing to listen again and again as Jackal tells a sad story about a kid stealing boots from a dead soldier.
-##Causes
+## Causes
 During the game, a list of 17 tapes is kept in memory, in which, among other things, the following information is noted:
  
 Figure 1. Illustration of a list of tapes in memory. The IsTaken field is filled in for example. The FromMap1 field is always filled like this.
@@ -32,9 +32,9 @@ Here is the glitch!
 All other changes in the scheme miraculously did not affect the logic. Even if you simply return the green arrow from “Tape Taken” back to “Next”, everything will work as it should.
 
 This error is another confirmation of the statement “If it ain't broken, why fix it”. Perhaps, during some refactoring of the NewJackalTapeFound method, some brackets ware put in wrong place of the source code, and the logic changed.
-##Treatment
+## Treatment
 To eliminate the error, it is actually enough to change just one byte in the Dunia.DLL file to turn the logic of the subroutine in the right direction.
-###Self-medication
+### Self-medication
 If you are confident in what you are doing and are familiar with hex editors, then this is what you need to do.
 1	Find where the game is installed - the desired file is located in the BIN subfolder.
 2	Of course, make a backup copy of the Dunia.DLL file, just in case.
@@ -43,15 +43,15 @@ If you are confident in what you are doing and are familiar with hex editors, th
 4	If found, then, to be completely sure, check that the file size is equal to 20183176 bytes, and the desired sequence was found at offset 0x0074D865.
 5	Change the first byte of the sequence from 0x0A to 0x14. Now it should look like this:
 **14** 3B CA 75 0A
-###Visit doctor
+### Visit doctor
 Those who do not want to bother with manually editing the file can try an easy-to-use patcher:
 https://github.com/FoxAhead/Far-Cry-2-Stealing-Boots-Jackal-Tapes-Patcher/releases/latest
 Download and run the file FarCry2StealingBootsJackalTapesPatcher.exe. Use the Browse button to select the Dunia.DLL file. Click Patch!
 On the start, the program will try to automatically determine the installation path of the game, so the Browse button should immediately take you to the desired folder, and all that remains is to select the Duina.DLL file. Before applying the patch, the program checks the file, and if everything is in OK, then the Patch button! below will be enabled to click. The backup will be created automatically as soon as you confirm patching. If at any of the stages something goes wrong, the program will report that.
 The patcher searches for a suitable pattern of bytes using mask, so theoretically it is able to correct the subroutine even in some exotic Dunia.DLL file (other size, other addresses), provided that there really is an erroneous subroutine.
-##Prognosis
+## Prognosis
 The final recovery can be considered only if, before applying the patch, you picked up no more than one tape on the second map. Otherwise, all subsequent picked up tapes simply disappeared irretrievably, without appearing in the list. In this case, look for an earlier save. Or ... why not replay the game?
-##P.S.
+## P.S.
 Did I ever tell you 
 what the definition
  of insanity is?
