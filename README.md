@@ -25,13 +25,13 @@ After update 1.03, the subroutine logic has changed a bit:
 ![Screenshot](Screenshots/Logic103.png?raw=true)
 >Figure 3. Incorrect logic of the NewJackalTapeFound subroutine after update 1.03
 
-Notice where the green arrow goes from “Tape Taken” check. Suppose that we passed into the second act, we are standing on the second map and the situation with the films we have as in the table above: three were found on the first map (two plus one from Reuben), and one was found on the second map. Next time, when on the second map we pick up the voice recorder, the first three tapes (00-02) will follow the path:
+Notice where the green arrow goes from “Tape Taken” check. Suppose that we passed into the second act, we are standing on the second map and the situation with the tapes we have as in the table above: three were found on the first map (two plus one from Reuben), and one was found on the second map. Next time, when on the second map we pick up the voice recorder, the first three tapes (00-02) will follow the path:
 
     Tape Taken --> YES --> 1st  Map --> NO --> Tape from 2nd Map --> NO --> Next
 Tapes 03-08 will follow the path:
 
     Tape Taken --> NO --> 1st  Map --> NO --> Tape from 2nd Map --> NO --> Next
-But film 09, despite the fact that it has already been marked as taken, will follow the path:
+But tape 09, despite the fact that it has already been marked as taken, will follow the path:
 
     Tape Taken --> YES --> 1st  Map --> NO --> Tape from 2nd Map --> YES --> PLAY
 
@@ -57,7 +57,9 @@ Those who do not want to bother with manually editing the file can try an easy-t
 https://github.com/FoxAhead/Far-Cry-2-Stealing-Boots-Jackal-Tapes-Patcher/releases/latest
 
 Download and run the file FarCry2StealingBootsJackalTapesPatcher.exe. Use the Browse button to select the Dunia.DLL file. Click Patch!
+
 On the start, the program will try to automatically determine the installation path of the game, so the Browse button should immediately take you to the desired folder, and all that remains is to select the Duina.DLL file. Before applying the patch, the program checks the file, and if everything is in OK, then the Patch button! below will be enabled to click. The backup will be created automatically as soon as you confirm patching. If at any of the stages something goes wrong, the program will report that.
+
 The patcher searches for a suitable pattern of bytes using mask, so theoretically it is able to correct the subroutine even in some exotic Dunia.DLL file (other size, other addresses), provided that there really is an erroneous subroutine.
 ## Prognosis
 The final recovery can be considered only if, before applying the patch, you picked up no more than one tape on the second map. Otherwise, all subsequent picked up tapes simply disappeared irretrievably, without appearing in the list. In this case, look for an earlier save. Or ... why not replay the game?
@@ -66,5 +68,7 @@ The final recovery can be considered only if, before applying the patch, you pic
 
 ## P.S.
 Did I ever tell you 
+
 what the definition
- of insanity is?
+
+of insanity is?
