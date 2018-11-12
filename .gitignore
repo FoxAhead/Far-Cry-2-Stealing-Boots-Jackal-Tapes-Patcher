@@ -67,3 +67,6 @@ __recovery/
 
 # Backup files
 *.bak*
+*.tmp
+# Document
+*.docx
