@@ -44,12 +44,12 @@ This error is another confirmation of the statement “If it ain't broken, why f
 To eliminate the error, it is actually enough to change just one byte in the Dunia.DLL file to turn the logic of the subroutine in the right direction.
 ### Self-medication
 If you are confident in what you are doing and are familiar with hex editors, then this is what you need to do.
-1	Find where the game is installed - the desired file is located in the BIN subfolder.
-2	Of course, make a backup copy of the Dunia.DLL file, just in case.
-3	Then open the file and find the following sequence of bytes:
+1.	Find where the game is installed - the desired file is located in the BIN subfolder.
+2.	Of course, make a backup copy of the Dunia.DLL file, just in case.
+3.	Then open the file and find the following sequence of bytes:
 **0A** 3B CA 75 0A
-4	If found, then, to be completely sure, check that the file size is equal to 20183176 bytes, and the desired sequence was found at offset 0x0074D865.
-5	Change the first byte of the sequence from 0x0A to 0x14. Now it should look like this:
+4.	If found, then, to be completely sure, check that the file size is equal to 20183176 bytes, and the desired sequence was found at offset 0x0074D865.
+5.	Change the first byte of the sequence from 0x0A to 0x14. Now it should look like this:
 **14** 3B CA 75 0A
 ### Visit doctor
 Those who do not want to bother with manually editing the file can try an easy-to-use patcher:
