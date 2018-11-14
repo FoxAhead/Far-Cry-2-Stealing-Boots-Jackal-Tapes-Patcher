@@ -47,13 +47,17 @@ If you are confident in what you are doing and are familiar with hex editors, th
 1.	Find where the game is installed - the desired file is located in the BIN subfolder.
 2.	Of course, make a backup copy of the Dunia.DLL file, just in case.
 3.	Then open the file and find the following sequence of bytes:
-**0A** 3B CA 75 0A
+
+    **0A** 3B CA 75 0A
+
 4.	If found, then, to be completely sure, check that the file size is equal to 20183176 bytes, and the desired sequence was found at offset 0x0074D865.
 5.	Change the first byte of the sequence from 0x0A to 0x14. Now it should look like this:
-**14** 3B CA 75 0A
+
+    **14** 3B CA 75 0A
+
 ### Visit doctor
 Those who do not want to bother with manually editing the file can try an easy-to-use patcher:
-
+    
 https://github.com/FoxAhead/Far-Cry-2-Stealing-Boots-Jackal-Tapes-Patcher/releases/latest
 
 Download and run the file FarCry2StealingBootsJackalTapesPatcher.exe. Use the Browse button to select the Dunia.DLL file. Click Patch!
