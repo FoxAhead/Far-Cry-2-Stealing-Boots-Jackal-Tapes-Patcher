@@ -39,7 +39,7 @@ Here is the glitch!
 
 All other changes in the scheme miraculously did not affect the logic. Even if you simply return the green arrow from “Tape Taken” back to “Next”, everything will work as it should.
 
-This error is another confirmation of the statement “If it ain't broken, why fix it”. Perhaps, during some refactoring of the NewJackalTapeFound method, some brackets ware put in wrong place of the source code, and the logic changed.
+This error is another confirmation of the statement “If it ain't broken, why fix it”. Perhaps, during some refactoring of the NewJackalTapeFound method, some brackets were put in wrong place of the source code, and the logic changed.
 ## Treatment
 To eliminate the error, it is actually enough to change just one byte in the Dunia.DLL file to turn the logic of the subroutine in the right direction.
 ### Self-medication
@@ -60,13 +60,21 @@ Download and run the file FarCry2StealingBootsJackalTapesPatcher.exe. Use the Br
 
 ![Screenshot](Screenshots/Patcher.png?raw=true)
 
-On the start, the program will try to automatically determine the installation path of the game, so the Browse button should immediately take you to the desired folder, and all that remains is to select the Duina.DLL file. Before applying the patch, the program checks the file, and if everything is in OK, then the Patch button! below will be enabled to click. The backup will be created automatically as soon as you confirm patching. If at any of the stages something goes wrong, the program will report that.
+On the start, the program will try to automatically determine the installation path of the game, so the Browse button should immediately take you to the desired folder, and all that remains is to select the Duina.DLL file. Before applying the patch, the program checks the file, and if everything is OK, then the Patch! button below will be enabled to click. The backup will be created automatically as soon as you confirm patching. If at any of the stages something goes wrong, the program will report that.
 
 The patcher searches for a suitable pattern of bytes using mask, so theoretically it is able to correct the subroutine even in some exotic Dunia.DLL file (other size, other addresses), provided that there really is an erroneous subroutine.
 ## Prognosis
 The final recovery can be considered only if, before applying the patch, you picked up no more than one tape on the second map. Otherwise, all subsequent picked up tapes simply disappeared irretrievably, without appearing in the list. In this case, look for an earlier save. Or ... why not replay the game?
 
 ![Screenshot](Screenshots/InGameGlutenFreeTape.jpg?raw=true)
+
+## Links
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=1563578739
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=1563607715
+
+https://forums.ubi.com/showthread.php/1955246
 
 ## P.S.
 Did I ever tell you 
