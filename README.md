@@ -42,6 +42,12 @@ All other changes in the scheme miraculously did not affect the logic. Even if y
 This error is another confirmation of the statement “If it ain't broken, why fix it”. Perhaps, during some refactoring of the NewJackalTapeFound method, some brackets were put in wrong place of the source code, and the logic changed.
 ## Treatment
 To eliminate the error, it is actually enough to change just one byte in the Dunia.DLL file to turn the logic of the subroutine in the right direction.
+
+| In order not to change the file physically, I recommend using the utility to start the game with various fixes right in the process memory. Read more: https://github.com/FoxAhead/Far-Cry-2-Multi-Fixer |
+| --- |
+
+
+
 ### Self-medication
 If you are confident in what you are doing and are familiar with hex editors, then this is what you need to do.
 1.	Find where the game is installed - the desired file is located in the BIN subfolder.
